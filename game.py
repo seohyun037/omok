@@ -40,15 +40,14 @@ def check():
                         continue
                 if count == 5:
                     print("The winner is Black.") if stone == "●" else print("The winner is White.")
-                    break
+                    quit()
 
 
 
+draw()
 
 while True:
-    draw()
     print("{}'s turn.".format(turn))
-    x, y = map(int, input("Place a stone. ").split())
 
     while True:
         try:
@@ -60,7 +59,7 @@ while True:
             print("Please put the stone again.")
         else:
             break
-        
+
     if turn == "Black":
         board[x-1][y-1] = "●"
         turn = "White"
