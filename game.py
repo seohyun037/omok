@@ -54,6 +54,7 @@ while True:
             x, y = map(int, input("Place a stone. ").split())
         except:
             print("Please put the stone again.")
+            continue
 
         if board[x-1][y-1] == "●" or board[x-1][y-1] == "○":
             print("Please put the stone again.")
